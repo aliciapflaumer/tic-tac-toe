@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 $background-color: #4e4e4e;
 $font-color: #dfdfdf;
 $white: #fff;
 
+=======
+>>>>>>> feature
 body {
   background-color: $background-color;
   color: $font-color;
 }
 
+<<<<<<< HEAD
 .box {
   border: 1px solid $white;
   width: 100px;
   height: 100px;
+=======
+.container {
+  float: right;
+}
+.game-box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid $font-color;
+>>>>>>> feature
 }
