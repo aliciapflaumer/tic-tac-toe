@@ -10,20 +10,19 @@
 const onClick = function () {
 
 // on the click of any divs with ids that begin
-// with cell- want to change text
+// with cell want to change text
   $("div[id^='cell']").on('click', function (event) {
     console.log(this)
-
+    // target element that we click on and change text
+     $(this).text('o')
   })
-  // target element that we click on and change text
-
 }
 
 onClick()
 
 // if it's x's turn fill cell with an x,
 // else fill square with o
-// 
+//
 module.exports = {
   onClick
 }
