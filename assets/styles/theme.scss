@@ -1,0 +1,13 @@
+body {
+  background-color: $background-color;
+  color: $font-color;
+}
+
+.container {
+  float: right;
+}
+.game-box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid $font-color;
+}
