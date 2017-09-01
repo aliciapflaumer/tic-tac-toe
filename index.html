@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+
+      <div class="game-board">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="row">
+          <div id="cell0" class="col-xs-3 game-box">0</div>
+          <div id="cell1" class="col-xs-3 game-box">1</div>
+          <div id="cell2" class="col-xs-3 game-box">2</div>
+        </div>
+
+        <div class="row">
+          <div id="cell3" class="col-xs-3 game-box">3</div>
+          <div id="cell4" class="col-xs-3 game-box">4</div>
+          <div id="cell5" class="col-xs-3 game-box">5</div>
+        </div>
+
+        <div class="row">
+          <div id="cell6" class="col-xs-3 game-box">6</div>
+          <div id="cell7" class="col-xs-3 game-box">7</div>
+          <div id="cell8" class="col-xs-3 game-box">8</div>
+        </div>
+      </div>
+
+      <div class="auth-wrapper">
+          <form id="sign-up">
+            <fieldset>
+              <h4>Sign up!</h4>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+              <input type="submit" name="submit" value="Sign up!">
+            </fieldset>
+          </form>
+
+          <form id="sign-in">
+            <fieldset>
+              <h4>Sign in!</h4>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" name="submit" value="Sign in!">
+            </fieldset>
+          </form>
+
+          <form id="change-password">
+            <fieldset>
+              <h4>Change password!</h4>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Change password">
+              <input type="submit" name="submit" value="Sign in!">
+            </fieldset>
+          </form>
+
+          <form id="sign-out">
+            <fieldset>
+              <h4>Sign out!</h4>
+              <input type="submit" name="submit" value="Sign out!">
+            </fieldset>
+          </form>
+      </div>
+
+    </body>
+</html>
