@@ -10,6 +10,10 @@ body {
   color: $font-color;
 }
 
+input[type=submit] {
+  color: $background-color;
+}
+
 .game-board {
   margin: auto 10%;
 }
