@@ -1,12 +1,11 @@
-curl "http://tic-tac-toe.wdibos.com/sign-up" \
+curl "http://tic-tac-toe.wdibos.com/change-password" \
   --include \
-  --request POST \
+  --request PATCH \
   --header "Content-type: application/json" \
   --data '{
     "credentials": {
     "email": "emailmail.com",
     "password": "scatter1",
-    "password_confirmation": "scatter1"
     }
   }'
 echo
