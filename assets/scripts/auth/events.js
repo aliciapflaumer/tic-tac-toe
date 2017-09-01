@@ -1,3 +1,25 @@
+'use strict'
+
+const getFormFields = require(`../../../lib/get-form-fields`)
+
+const api = require('./api')
+const ui = require('./ui')
+
+// auth events
+
+const onSignUp = function (event) {
+  const data = getFormFields(this)
+  console.log(data)
+  event.preventDefault()
+  api.signUp(data)
+    .then(ui.signUpSuccess)
+    .catch(ui.signUpFailure)
+}
+
+
+
+
+
 // Start with empty board of 9 cells
 // const board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
@@ -52,5 +74,6 @@ onClick()
 
 
 module.exports = {
-  onClick
+  onClick,
+  onSignUp
 }
