@@ -3,25 +3,27 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   console.log('Successfully signed up')
   $('#message').text('Successfully signed up')
+  console.log(this)
 }
 
 const signUpFailure = function (error) {
-  console.error(error)
+  // console.error(error)
   $('#message').text('Error on sign up')
+  console.log(this)
 }
 
 const signInSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   console.log('Successfully signed in')
   $('#message').text('Successfully signed in')
   store.user = data.user
 }
 
 const signInFailure = function (error) {
-  console.error(error)
+  // console.error(error)
   $('#message').text('Error on sign in')
 }
 
@@ -31,7 +33,7 @@ const changePasswordSuccess = function () {
 }
 
 const changePasswordFailure = function (error) {
-  console.log(error)
+  // console.log(error)
   $('#message').text('Error on change password!')
 }
 
@@ -42,7 +44,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function (error) {
-  console.log(error)
+  // console.log(error)
   $('#message').text('Error on sign out!')
 }
 
