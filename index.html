@@ -12,28 +12,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-
-      <div class="game-board">
-        <h1>Tic-Tac-Toe</h1>
-        <div class="row">
-          <div id="cell0" class="col-xs-3 game-box">0</div>
-          <div id="cell1" class="col-xs-3 game-box">1</div>
-          <div id="cell2" class="col-xs-3 game-box">2</div>
-        </div>
-
-        <div class="row">
-          <div id="cell3" class="col-xs-3 game-box">3</div>
-          <div id="cell4" class="col-xs-3 game-box">4</div>
-          <div id="cell5" class="col-xs-3 game-box">5</div>
-        </div>
-
-        <div class="row">
-          <div id="cell6" class="col-xs-3 game-box">6</div>
-          <div id="cell7" class="col-xs-3 game-box">7</div>
-          <div id="cell8" class="col-xs-3 game-box">8</div>
-        </div>
-    </div>
-
+      <h1>Tic-Tac-Toe</h1>
+<!-- begin auth stuff -->
       <div class="auth-wrapper">
         <p id='message'></p>
           <form id="sign-up">
@@ -70,6 +50,51 @@
               <input type="submit" name="submit" value="Sign out!">
             </fieldset>
           </form>
+      </div>
+
+<!-- begin game stuff -->
+
+      <!-- Score board -->
+    <div class="scoreboard_wrapper">
+        <div class="score div-1">
+          <p class="player_1">Player 1</p>
+          <div id="player_x" class="score_box"></div>
+        </div>
+        <div class="score div-2">
+          <p class="player_2">Player 2</p>
+          <div id="player_o" class="score_box"></div>
+        </div>
+        <div class="score div-3">
+          <p class="TieGame">Tie Games</p>
+          <div id="tie" class="score_box"></div>
+        </div>
+    </div>
+      <!-- Game board -->
+      <div class="game-board">
+        <div class="row">
+          <div id="cell0" class="col-xs-3 box"></div>
+          <div id="cell1" class="col-xs-3 box"></div>
+          <div id="cell2" class="col-xs-3 box"></div>
+        </div>
+
+        <div class="row">
+          <div id="cell3" class="col-xs-3 box"></div>
+          <div id="cell4" class="col-xs-3 box"></div>
+          <div id="cell5" class="col-xs-3 box"></div>
+        </div>
+
+        <div class="row">
+          <div id="cell6" class="col-xs-3 box"></div>
+          <div id="cell7" class="col-xs-3 box"></div>
+          <div id="cell8" class="col-xs-3 box"></div>
+        </div>
+      </div>
+
+      <!-- New game and reset score buttons -->
+
+      <div class="buttons">
+        <button class="newGame">New Game</button>
+        <button class="resetScore">Reset Score</button>
       </div>
 
     </body>
