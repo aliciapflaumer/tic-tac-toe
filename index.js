@@ -6,6 +6,11 @@
 // load manifests
 // scripts
 require('./assets/scripts/index.js')
+// require('./assets/scripts/auth/events.js')
 
 // styles
 require('./assets/styles/index.scss')
+
+// module.exports = {
+//   events
+// }
