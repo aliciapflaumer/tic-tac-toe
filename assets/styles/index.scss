@@ -38,6 +38,9 @@ button {
   cursor: pointer;
 }
 
+.scoreboard_wrapper {
+  display: inline-block;
+}
 .score {
   color: $font-color;
 }
@@ -56,9 +59,5 @@ button {
 }
 
 .div-2 {
-  display: inline-block;
-}
-
-.div-3 {
   float: right;
 }
