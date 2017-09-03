@@ -5,25 +5,60 @@ $background-color: #4e4e4e;
 $font-color: #dfdfdf;
 $white: #fff;
 
+.container-fluid {
+  text-align: center;
+}
+
 body {
   background-color: $background-color;
   color: $font-color;
 }
 
-input[type=submit] {
+input {
+  color: $background-color;
+}
+
+button {
   color: $background-color;
 }
 
 .game-board {
-  margin: auto 10%;
+  margin: 10px 10px;
+  text-align: center;
 }
-.game-box {
+.box {
   width: 100px;
   height: 100px;
   border: 2px solid $font-color;
+  border-radius: 5px;
   font-size: 70px;
   font-style: normal;
-  margin:  auto;
+  margin:  2px 2px 2px 2px;
   text-align: center;
   cursor: pointer;
+}
+
+.score {
+  color: $font-color;
+}
+
+.score_box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid $font-color;
+  border-radius: 5px;
+  margin: 2px auto;
+  font-size: 22px;
+}
+
+.div-1 {
+  float: left;
+}
+
+.div-2 {
+  display: inline-block;
+}
+
+.div-3 {
+  float: right;
 }
