@@ -20,10 +20,13 @@ input {
 
 button {
   color: $background-color;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
 }
 
 .game-board {
-  margin: 10px 10px;
+  margin: 10px auto;
   text-align: center;
 }
 .box {
