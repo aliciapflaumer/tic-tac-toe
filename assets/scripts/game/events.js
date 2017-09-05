@@ -53,17 +53,23 @@ const ui = require('./ui')
 //   $('#cell0').on('click', onClickCellZero)
 // }
 
-const turn = 'X'
-const otherTurn = 'O'
+let turn = 'X'
 
 $("div[id^='cell']").on('click', function (event) {
   event.preventDefault()
+
   console.log(this)
-// target element that we click on and change text
- $(this).text(turn)
+
+
+ if ($(this).val() === '') {
+   // target element that we click on and change text
+    if (turn === 'X') {
+      $(this).text('X')
+      turn = 'O'
+    } else {
+      $(this).text('O')
+      turn = 'X'
+    }
+ }
 
 })
-
-// module.exports = {
-//   addHandlers
-// }
