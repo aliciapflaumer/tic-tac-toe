@@ -9,6 +9,8 @@ const ui = require('./ui')
 
 let turn = 'X'
 
+
+
 // setting up event listener
 // "div[id^='cell']"
 $('.box').on('click', function (event) {
@@ -28,7 +30,7 @@ $('.box').on('click', function (event) {
       turn = 'X'
     }
  }
-
+// if Player X wins
  if ($('#cell0').text() === 'X' && $('#cell1').text() === 'X' && $('#cell2').text() === 'X')
    {
      $('#message').text('Player 1 Wins!')
@@ -70,7 +72,49 @@ $('.box').on('click', function (event) {
      console.log('Player 1 Wins!')
    }
 
+// If player O Wins
+if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text() === 'O')
+  {
+    $('#message').text('Player 2 Wins!')
+    console.log('Player 2 Wins!')
+  }
+  else if ($('#cell3').text() === 'O' && $('#cell4').text() === 'O' && $('#cell5').text() === 'O')
+  {
+    $('#message').text('Player 2 Wins!')
+    console.log('Player 2 Wins!')
+  }
+  else if ($('#cell6').text() === 'O' && $('#cell7').text() === 'O' && $('#cell8').text() === 'O')
+  {
+    $('#message').text('Player 2 Wins!')
+    console.log('Player 2 Wins!')
+  }
+  else if ($('#cell0').text() === 'O' && $('#cell3').text() === 'O' && $('#cell6').text() === 'O')
+  {
+    $('#message').text('Player 2 Wins!')
+    console.log('Player 2 Wins!')
+  }
+  else if ($('#cell1').text() === 'O' && $('#cell4').text() === 'O' && $('#cell7').text() === 'O')
+  {
+    $('#message').text('Player 2 Wins!')
+    console.log('Player 2 Wins!')
+  }
+  else if ($('#cell2').text() === 'O' && $('#cell5').text() === 'O' && $('#cell8').text() === 'O')
+  {
+    $('#message').text('Player 2 Wins!')
+    console.log('Player 2 Wins!')
+  }
+  else if ($('#cell0').text() === 'O' && $('#cell4').text() === 'O' && $('#cell8').text() === 'O')
+  {
+    $('#message').text('Player 2 Wins!')
+    console.log('Player 2 Wins!')
+  }
+  else if ($('#cell2').text() === 'O' && $('#cell4').text() === 'O' && $('#cell6').text() === 'O')
+  {
+    $('#message').text('Player 2 Wins!')
+    console.log('Player 2 Wins!')
+  }
 })
+
 
 
 
