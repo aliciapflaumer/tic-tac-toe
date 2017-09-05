@@ -6,6 +6,33 @@ webpackJsonp([0],[
 "use strict";
 
 
+var config = {
+  apiOrigins: {
+    production: 'https://aqueous-atoll-85096.herokuapp.com/',
+    development: 'http://tic-tac-toe.wdibos.com'
+  }
+};
+
+module.exports = config;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var store = {};
+
+module.exports = store;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var addNestedValue = function addNestedValue(pojo, name, value) {
   var recurse = function recurse(pojo, keys, value) {
     var key = keys.shift();
@@ -35,34 +62,54 @@ var addNestedValue = function addNestedValue(pojo, name, value) {
 module.exports = addNestedValue;
 
 /***/ }),
-/* 2 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var config = {
-  apiOrigins: {
-    production: 'https://aqueous-atoll-85096.herokuapp.com/',
-    development: 'http://tic-tac-toe.wdibos.com'
+var addNestedValue = __webpack_require__(3);
+
+var getFormFields = function getFormFields(form) {
+  var target = {};
+
+  var elements = form.elements || [];
+  for (var i = 0; i < elements.length; i++) {
+    var e = elements[i];
+    if (!e.hasAttribute('name')) {
+      continue;
+    }
+
+    var type = 'TEXT';
+    switch (e.nodeName.toUpperCase()) {
+      case 'SELECT':
+        type = e.hasAttribute('multiple') ? 'MULTIPLE' : type;
+        break;
+      case 'INPUT':
+        type = e.getAttribute('type').toUpperCase();
+        break;
+    }
+
+    var name = e.getAttribute('name');
+
+    if (type === 'MULTIPLE') {
+      for (var _i = 0; _i < e.length; _i++) {
+        if (e[_i].selected) {
+          addNestedValue(target, name, e[_i].value);
+        }
+      }
+    } else if (type !== 'RADIO' && type !== 'CHECKBOX' || e.checked) {
+      addNestedValue(target, name, e.value);
+    }
   }
+
+  return target;
 };
 
-module.exports = config;
+module.exports = getFormFields;
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var store = {};
-
-module.exports = store;
-
-/***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74,26 +121,26 @@ module.exports = store;
 // load manifests
 // scripts
 
-__webpack_require__(5);
+__webpack_require__(6);
 // require('./assets/scripts/auth/events.js')
 
 // styles
-__webpack_require__(13);
+__webpack_require__(15);
 
 // module.exports = {
 //   events
 // }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-var setAPIOrigin = __webpack_require__(6);
-var config = __webpack_require__(2);
-var authEvents = __webpack_require__(8);
+var setAPIOrigin = __webpack_require__(7);
+var config = __webpack_require__(1);
+var authEvents = __webpack_require__(9);
 var gameEvents = __webpack_require__(12);
 
 $(function () {
@@ -113,13 +160,13 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var parseNestedQuery = __webpack_require__(7);
+var parseNestedQuery = __webpack_require__(8);
 
 /*
   possibilites to handle and example URLs:
@@ -154,13 +201,13 @@ var setAPIOrigin = function setAPIOrigin(location, config) {
 module.exports = setAPIOrigin;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var addNestedValue = __webpack_require__(1);
+var addNestedValue = __webpack_require__(3);
 
 var parseNestedQuery = function parseNestedQuery(queryString) {
   return queryString.split('&').reduce(function (memo, element) {
@@ -176,13 +223,13 @@ var parseNestedQuery = function parseNestedQuery(queryString) {
 module.exports = parseNestedQuery;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-var getFormFields = __webpack_require__(9);
+var getFormFields = __webpack_require__(4);
 
 var api = __webpack_require__(10);
 var ui = __webpack_require__(11);
@@ -230,61 +277,14 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var addNestedValue = __webpack_require__(1);
-
-var getFormFields = function getFormFields(form) {
-  var target = {};
-
-  var elements = form.elements || [];
-  for (var i = 0; i < elements.length; i++) {
-    var e = elements[i];
-    if (!e.hasAttribute('name')) {
-      continue;
-    }
-
-    var type = 'TEXT';
-    switch (e.nodeName.toUpperCase()) {
-      case 'SELECT':
-        type = e.hasAttribute('multiple') ? 'MULTIPLE' : type;
-        break;
-      case 'INPUT':
-        type = e.getAttribute('type').toUpperCase();
-        break;
-    }
-
-    var name = e.getAttribute('name');
-
-    if (type === 'MULTIPLE') {
-      for (var _i = 0; _i < e.length; _i++) {
-        if (e[_i].selected) {
-          addNestedValue(target, name, e[_i].value);
-        }
-      }
-    } else if (type !== 'RADIO' && type !== 'CHECKBOX' || e.checked) {
-      addNestedValue(target, name, e.value);
-    }
-  }
-
-  return target;
-};
-
-module.exports = getFormFields;
-
-/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-var config = __webpack_require__(2);
-var store = __webpack_require__(3);
+var config = __webpack_require__(1);
+var store = __webpack_require__(2);
 
 var signUp = function signUp(data) {
   return $.ajax({
@@ -340,7 +340,7 @@ module.exports = {
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-var store = __webpack_require__(3);
+var store = __webpack_require__(2);
 
 var signUpSuccess = function signUpSuccess(data) {
   // console.log(data)
@@ -403,18 +403,121 @@ module.exports = {
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token (35:24)\n\n\u001b[0m \u001b[90m 33 | \u001b[39m})\n \u001b[90m 34 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 | \u001b[39m\u001b[36mif\u001b[39m (\u001b[32m'.box'\u001b[39m \u001b[33m>\u001b[39m \u001b[32m'X'\u001b[39m \u001b[33m||\u001b[39m \u001b[32m'O'\u001b[39m)\u001b[33m.\u001b[39mhtml() \u001b[33m!==\u001b[39m \u001b[32m''\u001b[39m) {\n \u001b[90m    | \u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 | \u001b[39m  $\n \u001b[90m 37 | \u001b[39m}\n \u001b[90m 38 | \u001b[39m\u001b[0m\n");
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+var getFormFields = __webpack_require__(4);
+
+var api = __webpack_require__(13);
+var ui = __webpack_require__(14);
+
+// game events
+
+var turn = 'X';
+
+// setting up event listener
+// "div[id^='cell']"
+$('.box').on('click', function (event) {
+  event.preventDefault();
+
+  console.log(this);
+
+  if ($(this).val() === '') {
+    // target element that we click on and change text
+
+    if (turn === 'X') {
+      $(this).text('X');
+      turn = 'O';
+    } else {
+      $(this).text('O');
+      turn = 'X';
+    }
+  }
+  // if Player X wins
+  if ($('#cell0').text() === 'X' && $('#cell1').text() === 'X' && $('#cell2').text() === 'X') {
+    $('#message').text('Player 1 Wins!');
+    console.log('Player 1 Wins!');
+  } else if ($('#cell3').text() === 'X' && $('#cell4').text() === 'X' && $('#cell5').text() === 'X') {
+    $('#message').text('Player 1 Wins!');
+    console.log('Player 1 Wins!');
+  } else if ($('#cell6').text() === 'X' && $('#cell7').text() === 'X' && $('#cell8').text() === 'X') {
+    $('#message').text('Player 1 Wins!');
+    console.log('Player 1 Wins!');
+  } else if ($('#cell0').text() === 'X' && $('#cell3').text() === 'X' && $('#cell6').text() === 'X') {
+    $('#message').text('Player 1 Wins!');
+    console.log('Player 1 Wins!');
+  } else if ($('#cell1').text() === 'X' && $('#cell4').text() === 'X' && $('#cell7').text() === 'X') {
+    $('#message').text('Player 1 Wins!');
+    console.log('Player 1 Wins!');
+  } else if ($('#cell2').text() === 'X' && $('#cell5').text() === 'X' && $('#cell8').text() === 'X') {
+    $('#message').text('Player 1 Wins!');
+    console.log('Player 1 Wins!');
+  } else if ($('#cell0').text() === 'X' && $('#cell4').text() === 'X' && $('#cell8').text() === 'X') {
+    $('#message').text('Player 1 Wins!');
+    console.log('Player 1 Wins!');
+  } else if ($('#cell2').text() === 'X' && $('#cell4').text() === 'X' && $('#cell6').text() === 'X') {
+    $('#message').text('Player 1 Wins!');
+    console.log('Player 1 Wins!');
+  }
+
+  // If player O Wins
+  if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text() === 'O') {
+    $('#message').text('Player 2 Wins!');
+    console.log('Player 2 Wins!');
+  } else if ($('#cell3').text() === 'O' && $('#cell4').text() === 'O' && $('#cell5').text() === 'O') {
+    $('#message').text('Player 2 Wins!');
+    console.log('Player 2 Wins!');
+  } else if ($('#cell6').text() === 'O' && $('#cell7').text() === 'O' && $('#cell8').text() === 'O') {
+    $('#message').text('Player 2 Wins!');
+    console.log('Player 2 Wins!');
+  } else if ($('#cell0').text() === 'O' && $('#cell3').text() === 'O' && $('#cell6').text() === 'O') {
+    $('#message').text('Player 2 Wins!');
+    console.log('Player 2 Wins!');
+  } else if ($('#cell1').text() === 'O' && $('#cell4').text() === 'O' && $('#cell7').text() === 'O') {
+    $('#message').text('Player 2 Wins!');
+    console.log('Player 2 Wins!');
+  } else if ($('#cell2').text() === 'O' && $('#cell5').text() === 'O' && $('#cell8').text() === 'O') {
+    $('#message').text('Player 2 Wins!');
+    console.log('Player 2 Wins!');
+  } else if ($('#cell0').text() === 'O' && $('#cell4').text() === 'O' && $('#cell8').text() === 'O') {
+    $('#message').text('Player 2 Wins!');
+    console.log('Player 2 Wins!');
+  } else if ($('#cell2').text() === 'O' && $('#cell4').text() === 'O' && $('#cell6').text() === 'O') {
+    $('#message').text('Player 2 Wins!');
+    console.log('Player 2 Wins!');
+  }
+});
+
+module.exports = {};
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+var config = __webpack_require__(1);
+var store = __webpack_require__(2);
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(14);
+var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -422,7 +525,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(15)(content, options);
+var update = __webpack_require__(17)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -439,13 +542,13 @@ if(false) {
 }
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: \n=======\n^\n      Invalid CSS after \".container {\": expected \"{\", was \"=======\"\n      in /Users/aliciapflaumer/wdi/projects/tic-tac-toe/assets/styles/theme.scss (line 11, column 1)");
+throw new Error("Module build failed: \n@import 'theme';\n^\n      File to import not found or unreadable: theme.\nParent style sheet: stdin\n      in /Users/aliciapflaumer/wdi/projects/tic-tac-toe/assets/styles/index.scss (line 4, column 1)");
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -491,7 +594,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(16);
+var	fixUrls = __webpack_require__(18);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -804,7 +907,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports) {
 
 
@@ -899,4 +1002,4 @@ module.exports = function (css) {
 
 
 /***/ })
-],[4]);
+],[5]);
