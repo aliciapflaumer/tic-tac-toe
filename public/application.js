@@ -108,6 +108,7 @@ $(function () {
 
 $(function () {
   authEvents.addHandlers();
+  // gameEvents.addHandlers()
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
@@ -402,46 +403,9 @@ module.exports = {
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function($) {
-
-// check whose turn it is
-// if it's x's turn place value into cell
-// if it's not x's turn place the value o into cell
-// if it's o's turn fill cell with an o,
-// else stop x from filling a square and fill square with o
-// if one player gets 3 in a row, show player wins in ui.js
-// and end play so no one can play anymore squares
-
-
-// Start with empty board of 9 cells
-
-var board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-//
-// const createGame = function () {
-//
-// }
-
-var turn = function turn() {
-  // // if you click any cell fill an x
-  // // on the click of any divs with ids that begin
-  // // with cell want to change text
-  $("div[id^='cell']").on('click', function (event) {
-    event.preventDefault();
-    console.log(this);
-    // target element that we click on and change text
-    $(this).text('X');
-  });
-};
-turn();
-
-module.exports = {
-  // board,
-  // createGame
-};
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+throw new Error("Module build failed: SyntaxError: Unexpected token (35:24)\n\n\u001b[0m \u001b[90m 33 | \u001b[39m})\n \u001b[90m 34 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 | \u001b[39m\u001b[36mif\u001b[39m (\u001b[32m'.box'\u001b[39m \u001b[33m>\u001b[39m \u001b[32m'X'\u001b[39m \u001b[33m||\u001b[39m \u001b[32m'O'\u001b[39m)\u001b[33m.\u001b[39mhtml() \u001b[33m!==\u001b[39m \u001b[32m''\u001b[39m) {\n \u001b[90m    | \u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 | \u001b[39m  $\n \u001b[90m 37 | \u001b[39m}\n \u001b[90m 38 | \u001b[39m\u001b[0m\n");
 
 /***/ }),
 /* 13 */
