@@ -29,9 +29,56 @@ $('.box').on('click', function (event) {
     }
  }
 
+ if ($('#cell0').text() === 'X' && $('#cell1').text() === 'X' && $('#cell2').text() === 'X')
+   {
+     $('#message').text('Player 1 Wins!')
+     console.log('Player 1 Wins!')
+   }
+   else if ($('#cell3').text() === 'X' && $('#cell4').text() === 'X' && $('#cell5').text() === 'X')
+   {
+     $('#message').text('Player 1 Wins!')
+     console.log('Player 1 Wins!')
+   }
+   else if ($('#cell6').text() === 'X' && $('#cell7').text() === 'X' && $('#cell8').text() === 'X')
+   {
+     $('#message').text('Player 1 Wins!')
+     console.log('Player 1 Wins!')
+   }
+   else if ($('#cell0').text() === 'X' && $('#cell3').text() === 'X' && $('#cell6').text() === 'X')
+   {
+     $('#message').text('Player 1 Wins!')
+     console.log('Player 1 Wins!')
+   }
+   else if ($('#cell1').text() === 'X' && $('#cell4').text() === 'X' && $('#cell7').text() === 'X')
+   {
+     $('#message').text('Player 1 Wins!')
+     console.log('Player 1 Wins!')
+   }
+   else if ($('#cell2').text() === 'X' && $('#cell5').text() === 'X' && $('#cell8').text() === 'X')
+   {
+     $('#message').text('Player 1 Wins!')
+     console.log('Player 1 Wins!')
+   }
+   else if ($('#cell0').text() === 'X' && $('#cell4').text() === 'X' && $('#cell8').text() === 'X')
+   {
+     $('#message').text('Player 1 Wins!')
+     console.log('Player 1 Wins!')
+   }
+   else if ($('#cell2').text() === 'X' && $('#cell4').text() === 'X' && $('#cell6').text() === 'X')
+   {
+     $('#message').text('Player 1 Wins!')
+     console.log('Player 1 Wins!')
+   }
 
 })
 
-if ('.box' > 'X' || 'O').html() !== '') {
-  $
+
+
+
+
+
+
+
+module.exports = {
+
 }
