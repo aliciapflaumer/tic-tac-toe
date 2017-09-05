@@ -17,4 +17,5 @@ $(() => {
 
 $(() => {
   authEvents.addHandlers()
+  // gameEvents.addHandlers()
 })
