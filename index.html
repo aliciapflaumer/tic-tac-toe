@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Tic-Tac-Toe</title>
+      <title>Alicia's Tic-Tac-Toe Game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Tic-Tac-Toe</h1>
+      <h1>Alicia's Tic-Tac-Toe Game</h1>
 <!-- begin auth stuff -->
       <div class="auth-wrapper">
         <p id='message'></p>
@@ -57,33 +57,38 @@
       <!-- Score board -->
     <div class="scoreboard_wrapper">
         <div class="score div-1">
-          <p class="player_1">Player 1</p>
+          <p class="player_1">Player X</p>
           <div id="player_x" class="score_box"></div>
         </div>
         <div class="score div-2">
-          <p class="player_2">Player 2</p>
+          <p class="player_2">Player O</p>
           <div id="player_o" class="score_box"></div>
+        </div>
+        <div class="score div-3">
+          <p class="tie-games">Tie Games</p>
+          <div id="tie" class="score_box"></div>
         </div>
     </div>
 
       <!-- Game board -->
       <div class="game-board">
+        <p id='game-message'></p>
         <div class="row">
-          <div id="cell0" class="col-sm-3 box"></div>
-          <div id="cell1" class="col-sm-3 box"></div>
-          <div id="cell2" class="col-sm-3 box"></div>
+          <div id="cell0" class="col-sm-3 col-md-8 box"></div>
+          <div id="cell1" class="col-sm-3 col-md-8 box"></div>
+          <div id="cell2" class="col-sm-3 col-md-8 box"></div>
         </div>
 
         <div class="row">
-          <div id="cell3" class="col-sm-3 box"></div>
-          <div id="cell4" class="col-sm-3 box"></div>
-          <div id="cell5" class="col-sm-3 box"></div>
+          <div id="cell3" class="col-sm-3 col-md-8 box"></div>
+          <div id="cell4" class="col-sm-3 col-md-8 box"></div>
+          <div id="cell5" class="col-sm-3 col-md-8 box"></div>
         </div>
 
         <div class="row">
-          <div id="cell6" class="col-sm-3 box"></div>
-          <div id="cell7" class="col-sm-3 box"></div>
-          <div id="cell8" class="col-sm-3 box"></div>
+          <div id="cell6" class="col-sm-3 col-md-8 box"></div>
+          <div id="cell7" class="col-sm-3 col-md-8 box"></div>
+          <div id="cell8" class="col-sm-3 col-md-8 box"></div>
         </div>
       </div>
 
@@ -91,7 +96,7 @@
 
       <div class="buttons">
         <button class="newGame">New Game</button>
-        <!-- <button class="resetScore">Reset Score</button> -->
+        <button class="resetScore">Reset Score</button>
       </div>
       <footer>
         <p>Made by <a href="https://github.com/aliciapflaumer/">Alicia Pflaumer</a></p>

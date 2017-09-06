@@ -1,6 +1,5 @@
-curl "http://tic-tac-toe.wdibos.com/" \
---inlude \
---request PATCH  \
+
+curl --include --request PATCH "http://tic-tac-toe.wdibos.com/" \
 --header "Authorization: Token token=$TOKEN" \
 --header "Content-Type: application/json" \
 --data '{
