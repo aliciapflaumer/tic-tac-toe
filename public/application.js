@@ -551,7 +551,7 @@ if(false) {
 /* 16 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: \n@import 'theme';\n^\n      File to import not found or unreadable: theme.\nParent style sheet: stdin\n      in /Users/aliciapflaumer/wdi/projects/tic-tac-toe/assets/styles/index.scss (line 4, column 1)");
+throw new Error("Module build failed: \n@import '~bootstrap-sass/assets/stylesheets/bootstrap';\n                                                      ^\n      Invalid CSS after \"...ets/bootstrap';\": expected 1 selector or at-rule, was \"=======\"\n      in /Users/aliciapflaumer/wdi/projects/tic-tac-toe/assets/styles/index.scss (line 2, column 56)");
 
 /***/ }),
 /* 17 */
