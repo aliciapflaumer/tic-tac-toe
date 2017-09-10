@@ -7,6 +7,12 @@ const gameEvents = require('./game/events')
 
 $(() => {
   setAPIOrigin(location, config)
+
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('.newGame').hide()
+  $('.scoreboard_wrapper').hide()
+  $('.game-board').hide()
 })
 
 // use require with a reference to bundle the file and use it in this file
@@ -17,5 +23,7 @@ $(() => {
 
 $(() => {
   authEvents.addHandlers()
-  // gameEvents.addHandlers()
+  gameEvents.addHandlers()
+
+
 })

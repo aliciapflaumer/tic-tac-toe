@@ -11,7 +11,7 @@ const signUpSuccess = function (data) {
 
 const signUpFailure = function (error) {
   // console.error(error)
-  $('#message').text('Error on sign up')
+  $('#message').text('Error on sign up. You may already be signed in.')
   // console.log(this)
 }
 
@@ -21,6 +21,7 @@ const signInSuccess = function (data) {
   $('#message').text('Successfully signed in')
   store.user = data.user
   // console.log('store.user console log data is ' + store.user)
+  $( ".game-board" ).show()
 }
 
 const signInFailure = function (error) {
