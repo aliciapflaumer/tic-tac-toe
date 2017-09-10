@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 19:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9,16 +9,16 @@ webpackJsonp([1],{
 // Load all specs so webpack can find them. Think of this as an automatic
 // manifest for bundling specs.
 
-var req = __webpack_require__(20);
+var req = __webpack_require__(26);
 req.keys().forEach(req);
 
 /***/ }),
 
-/***/ 20:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./example.spec.js": 21
+	"./example.spec.js": 27
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -34,11 +34,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 20;
+webpackContext.id = 26;
 
 /***/ }),
 
-/***/ 21:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54,4 +54,4 @@ describe('Example DOM test', function () {
 
 /***/ })
 
-},[19]);
+},[25]);
