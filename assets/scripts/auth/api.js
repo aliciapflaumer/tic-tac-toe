@@ -9,6 +9,7 @@ const signUp = function (data) {
     method: 'POST',
     data
   })
+
 }
 
 const signIn = function (data) {
