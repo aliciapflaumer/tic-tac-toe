@@ -11,13 +11,13 @@
 *2.  API: Create new game on the server. (CREATE)*
 1. [ done ]- Create a button in index.html called New Game
    [ done ] - Site must start with button hidden
-   [ ] - Once signed in, button should be shown
-   [ ] - Once signed out, button should be hidden again
-- in `index.js` uncomment the `gameEvents.addHandlers()`
-- in `games/events.js` wrap the code in a function called `addHandlers` and `export.modules = {addHandlers}`
-- add another click event within the `addHandlers` function for when the button is clicked
-- when the button is clicked it should run an anonymous function that calls `api.createGame()`
-- add a `.then(ui.createGameSuccess)` and a `catch(ui.createGameFail)`
-- `createGameSuccess` should show the game board and say whos turn it is
+   [ done ] - Once signed in, button should be shown
+   [ done ] - Once signed out, button should be hidden again
+1.  [ done ] -  in `index.js` uncomment the `gameEvents.addHandlers()`
+1.  [ ] - in `games/events.js` wrap the code in a function called `addHandlers` and `export.modules = {addHandlers}`
+1.  [ ] - add another click event within the `addHandlers` function for when the button is clicked
+1.  [ ] - when the button is clicked it should run an anonymous function that calls `api.createGame()`
+1.  [ ] - add a `.then(ui.createGameSuccess)` and a `catch(ui.createGameFail)`
+1.  [ ] - `createGameSuccess` should show the game board and say whos turn it is
 
 Touch base on Tuesday about progress
