@@ -24,6 +24,4 @@ $(() => {
 $(() => {
   authEvents.addHandlers()
   gameEvents.addHandlers()
-
-
 })
