@@ -14,10 +14,20 @@ body {
   color: $font-color;
 }
 
+.auth-wrapper {
+  width: 600px;
+}
+#change-password {
+  float: left;
+}
+
+#sign-out {
+  float: right;
+}
+
 input {
   color: $background-color;
 }
-
 
 button {
   color: $background-color;
@@ -33,7 +43,7 @@ button {
 }
 
 .box {
-  width: 300px;
+  width: 100px;
   height: 100px;
   border: 2px solid $font-color;
   border-radius: 5px;

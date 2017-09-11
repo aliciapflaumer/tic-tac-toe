@@ -7,6 +7,19 @@ const ui = require('./ui')
 
 // game events
 
+const addHandlers = function () {
+
+
+$('.newGame').on('click', function (event) {
+  event.preventDefault()
+  console.log(this)
+
+  api.creatGame(data)
+    .then(ui.creatGameSuccess)
+    .catch(ui.creatGameFailure)
+})
+
+
 let turn = 'X'
 
 // setting up event listener
@@ -100,5 +113,10 @@ if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text
   // If tie game
 
 
-
 })
+
+} // end addHandlers function
+
+module.export = {
+  addHandlers
+}
