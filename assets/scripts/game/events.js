@@ -10,13 +10,12 @@ const ui = require('./ui')
 const addHandlers = function () {
 
 
-$('.newGame').on('click', function (event) {
-  event.preventDefault()
-  console.log(this)
-
-  api.creatGame(data)
-    .then(ui.creatGameSuccess)
-    .catch(ui.creatGameFailure)
+$('.newGame').on('click', function () {
+  // console.log('new game button clicked!')
+  $('.game-board').show()
+  api.createGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
 })
 
 
@@ -29,7 +28,7 @@ $('.box').on('click', function (event) {
   // console.log(this)
 
 
-    if ($(this).val() === '') {
+    if ($(this).text() === '') {
       // target element that we click on and change text
 
         if (turn === 'X') {
@@ -117,6 +116,6 @@ if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text
 
 } // end addHandlers function
 
-module.export = {
+module.exports = {
   addHandlers
 }
