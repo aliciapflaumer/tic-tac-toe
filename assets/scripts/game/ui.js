@@ -2,12 +2,14 @@
 
 const store = require('../store')
 
-const creatGameSuccess = function() {
-  $('.game-board').show()
+const createGameSuccess = function() {
   $('#message').text("It\'s X\'s turn!")
 }
 
+const createGameFail = function() {
+  $('#message').text("There seems to be an error creating game!")
+}
 
 module.exports = {
-  creatGameSuccess
+  createGameSuccess
 }
