@@ -9,10 +9,14 @@ const ui = require('./ui')
 
 const addHandlers = function () {
 
-
-$('.newGame').on('click', function () {
+$('.newGame').on('click', function (event) {
   // console.log('new game button clicked!')
+  event.preventDefault()
+  const data = getFormFields(event.target)
+
   $('.game-board').show()
+  $('.scoreboard_wrapper').show()
+  
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)

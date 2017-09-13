@@ -21,7 +21,7 @@ const signInSuccess = function (data) {
   $('#message').text('Successfully signed in')
   store.user = data.user
   // console.log('store.user console log data is ' + store.user)
-  $( ".game-board" ).show()
+  // $( ".game-board" ).show()
 }
 
 const signInFailure = function (error) {

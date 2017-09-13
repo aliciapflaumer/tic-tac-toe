@@ -18,7 +18,7 @@
 1.  [ done ] - add another click event within the `addHandlers` function for when the button is clicked
 1.  [ done ] - when the button is clicked it should run an anonymous function that calls `api.createGame()`
 1.  [ done ] - add a `.then(ui.createGameSuccess)` and a `catch(ui.createGameFail)`
-1.  [  ] - `createGameSuccess` should show the game board and say whos turn it is
+1.  [ done ] - `createGameSuccess` should show the game board and say whos turn it is
 
 Touch base on Tuesday about progress
 
