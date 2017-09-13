@@ -2,7 +2,7 @@
 
 ## Technologies Used
 
-• Javascript, AJAX, and jQuery
+• HTML, SCSS, Javascript, AJAX, and jQuery
 
 • Grunt serve and grunt deploy to manage development and production servers
 
@@ -10,22 +10,11 @@
 
 ## What I have learned so far
 
-Even though I know I will not make requirements at least by the first due date, I have learned a lot. When it comes to learning new technical skills I grasp the concepts a bit slow. I have to remind myself to slow down and read through the problem and eventually I will comprehend. 
+Even though I know I will not make requirements at least by the first due date, I have learned a lot. When it comes to learning new technical skills I grasp the concepts a bit slow. I have to remind myself to slow down and read through the problem and eventually I will comprehend.
 
 ## Unsolved Problems
 
-• I'm aware that this code is DRY – but it was more important to me to grasp the concepts and build a functioning game.
-
-• The board is playable but there are features not yet implemented:
-    • the players can still change a square after its been filled
-    • the buttons for creating a new game and reset the game don't work
-    • The score boxes don't function
-
-• Hide/Show not implemented yet:
-  • need to show the sign-in and sign-up fields and hide the change password field and sign out button on loggin screen
-  • Once logged in, need to hide the sign-in and sign-up fields, and show the sign-out button
-
-• Code better to not have DRY code. simplifing the events.js by a single event handler rather than repeating code in a long if/else statement
+• Code better to have DRYer code by simplifing the the click events and if/else statements in the events.js file, by not repeating code in a long if/else statement
 
 ## Wireframes
 

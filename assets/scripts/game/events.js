@@ -10,8 +10,10 @@ const ui = require('./ui')
 const addHandlers = function () {
 
 
-$('.newGame').on('click', function () {
+$('.newGame').on('click', function (event) {
   // console.log('new game button clicked!')
+  event.preventDefault()
+  const data = getFormFields(event.target)
   $('.game-board').show()
   api.createGame()
     .then(ui.createGameSuccess)
