@@ -15,14 +15,14 @@ const createGameFail = function (data) {
 }
 
 
-const updateGameSuccess = function (data) {
-  console.log(data)
-
-}
-
-const updateGameFail = function (data) {
-  console.log(data)
-}
+// const updateGameSuccess = function (data) {
+//   console.log(data)
+//
+// }
+//
+// const updateGameFail = function (data) {
+//   console.log(data)
+// }
 
 
 // const showGamesSuccess = function (data) {
@@ -32,7 +32,7 @@ const updateGameFail = function (data) {
 module.exports = {
   createGameSuccess,
   createGameFail,
-  updateGameSuccess,
-  updateGameFail,
+  // updateGameSuccess,
+  // updateGameFail,
   // showGamesSuccess
 }

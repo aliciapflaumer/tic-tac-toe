@@ -26,7 +26,7 @@ const onSignIn = function (event) {
   $('#sign-out').show()
   $('.newGame').show()
   $('.game-board').hide()
-  
+
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
