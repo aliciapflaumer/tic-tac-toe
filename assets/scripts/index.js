@@ -14,6 +14,9 @@ $(() => {
   $('#getGamesBtn').hide()
   $('.scoreboard_wrapper').hide()
   $('.game-board').hide()
+
+
+
 })
 
 

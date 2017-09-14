@@ -37,6 +37,12 @@ $('.box').on('click', function (event) {
   // console.log(this)
 
 
+  $('#getGamesBtn').on('click', function(event) {
+      event.preventDefault()
+      console.log('get game button clicked!')
+      $('#game-message').text('You have played ' + data.games.length + ' times').fadeIn(5000)
+  })
+
     if ($(this).text() === '') {
       // target element that we click on and change text
 
@@ -148,21 +154,21 @@ const onUpdateGame = function (index, value, over) {
   .catch(ui.updateGameFailure)
 }
 
-const onGetGames = function () {
-
-  $('#getGamesBtn').on('click', function(event) {
-      event.preventDefault()
-      // console.log('get game button clicked!')
-      $('#game-message').text('You have played ' + data.games.length + ' times').fadeIn(5000)
-  })
-
-  api.getGames()
-    .then(ui.showGamesSuccess)
-}
+// const onGetGames = function () {
+//
+//   $('#getGamesBtn').on('click', function(event) {
+//       event.preventDefault()
+//       // console.log('get game button clicked!')
+//       $('#game-message').text('You have played ' + data.games.length + ' times').fadeIn(5000)
+//   })
+//
+//   api.getGames()
+//     // .then(ui.showGamesSuccess)
+// }
 
 
 module.exports = {
   addHandlers,
   onUpdateGame,
-  onGetGames
+  // onGetGames
 }
