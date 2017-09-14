@@ -11,9 +11,12 @@ $(() => {
   $('#change-password').hide()
   $('#sign-out').hide()
   $('.newGame').hide()
+  $('#getGamesBtn').hide()
   $('.scoreboard_wrapper').hide()
   $('.game-board').hide()
 })
+
+
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')

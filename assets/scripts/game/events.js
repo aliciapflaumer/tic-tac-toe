@@ -19,6 +19,8 @@ $('.newGame').on('click', function (event) {
 
   $('.box').text('')
 
+  $('#getGamesBtn').show()
+
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
@@ -125,10 +127,12 @@ if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text
 
 })
 
+
 } // end addHandlers function
 
 const onUpdateGame = function (index, value, over) {
-  event.preventDefault()
+  // console.log('onUpdateGame event data reached')
+
   const data = {
     'game': {
       'cell': {
@@ -139,27 +143,26 @@ const onUpdateGame = function (index, value, over) {
     }
   }
   console.log(data)
-
   api.updateGame(data)
   .then(ui.updateGameSuccess)
   .catch(ui.updateGameFailure)
 }
 
-// const onGetGames = function () {
-//
-//   $('#getGamesBtn').on('click', function(event) {
-//       event.preventDefault()
-//       // console.log('get game button clicked!')
-//       $('#game-message').text('You have played ' + HOW DO I GET THE TOTAL? + ' times').fadeIn(5000)
-//   })
-//
-//   api.getGames()
-//     .then(ui.showGamesSuccess)
-// }
+const onGetGames = function () {
+
+  $('#getGamesBtn').on('click', function(event) {
+      event.preventDefault()
+      // console.log('get game button clicked!')
+      $('#game-message').text('You have played ' + data.games.length + ' times').fadeIn(5000)
+  })
+
+  api.getGames()
+    .then(ui.showGamesSuccess)
+}
 
 
 module.exports = {
   addHandlers,
   onUpdateGame,
-  // onGetGames
+  onGetGames
 }

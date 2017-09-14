@@ -1,5 +1,5 @@
 curl "http://tic-tac-toe.wdibos.com/" \
---inlude \
+--include \
 --request GET  \
 --header "Authorization: Token token=$TOKEN" \
 --header "Content-Type: application/json" \
