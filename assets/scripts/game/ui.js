@@ -27,7 +27,7 @@ const updateGameFail = function (data) {
 
 
 const getGamesSuccess = function (data) {
-  // console.log('getGamesSuccess ui function reached')
+  console.log('getGamesSuccess ui function reached')
   // $('#game-message').text('You have played XX times').fadeIn(5000)
   $('#game-message').text('You have played ' + data.games.length + ' times').fadeIn(5000)
 }
