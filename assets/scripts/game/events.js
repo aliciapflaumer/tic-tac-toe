@@ -32,7 +32,7 @@ $('#getGamesBtn').on('click', function(event) {
     // console.log('getGamesBtn button clicked!')
 
 api.getGames()
-  .then(ui.showGamesSuccess)
+  .then(ui.getGamesSuccess)
 })
 
 

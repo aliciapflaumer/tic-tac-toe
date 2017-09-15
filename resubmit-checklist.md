@@ -24,7 +24,7 @@ Touch base on Tuesday about progress
 
 1. [  ] Update a game by storing new moves. (UPDATE)*
 
-1. [  ] Visually display the results of retrieving game statistics, such as total games won by a user. (READ)*
+1. [ done ] Visually display the results of retrieving game statistics, such as total games won by a user. (READ)*
 
 1. [ done ] Check for draw
 
