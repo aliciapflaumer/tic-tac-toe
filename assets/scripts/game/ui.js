@@ -15,24 +15,27 @@ const createGameFail = function (data) {
 }
 
 
-// const updateGameSuccess = function (data) {
-//   console.log(data)
-//
-// }
-//
-// const updateGameFail = function (data) {
-//   console.log(data)
-// }
+const updateGameSuccess = function (data) {
+  console.log(data)
+  console.log('updateGameSuccess ui function reached')
+
+}
+
+const updateGameFail = function (data) {
+  console.log(data)
+}
 
 
-// const showGamesSuccess = function (data) {
-//
-// }
+const getGamesSuccess = function (data) {
+  console.log('getGamesSuccess ui function reached')
+  // $('#game-message').text('You have played XX times').fadeIn(5000)
+  $('#game-message').text('You have played' + data.games.length + 'times').fadeIn(5000)
+}
 
 module.exports = {
   createGameSuccess,
   createGameFail,
-  // updateGameSuccess,
-  // updateGameFail,
-  // showGamesSuccess
+  updateGameSuccess,
+  updateGameFail,
+  getGamesSuccess
 }

@@ -27,6 +27,14 @@ $('.newGame').on('click', function (event) {
 })
 
 
+$('#getGamesBtn').on('click', function(event) {
+    event.preventDefault()
+    // console.log('getGamesBtn button clicked!')
+
+api.getGames()
+  .then(ui.showGamesSuccess)
+})
+
 
 let turn = 'X'
 
@@ -148,21 +156,10 @@ const onUpdateGame = function (index, value, over) {
   .catch(ui.updateGameFailure)
 }
 
-const onGetGames = function () {
 
-  $('#getGamesBtn').on('click', function(event) {
-      event.preventDefault()
-      // console.log('get game button clicked!')
-      $('#game-message').text('You have played ' + data.games.length + ' times').fadeIn(5000)
-  })
-
-  api.getGames()
-    .then(ui.showGamesSuccess)
-}
 
 
 module.exports = {
   addHandlers,
-  onUpdateGame,
-  onGetGames
+  onUpdateGame
 }

@@ -5,8 +5,9 @@ const store = require('../store')
 
 const createGame = function (data) {
   console.log(data)
+  // console.log('createGame works')
   return $.ajax({
-    url: config.apiOrigin + '/games',
+    url: config.apiOrigin + '/games/',
     method: 'POST',
     // add Token
     headers: {
@@ -17,10 +18,10 @@ const createGame = function (data) {
 }
 
 const updateGame = function (data) {
-  console.log('updateGame api function reached')
   console.log(data)
+  console.log('updateGame api function reached')
   return $.ajax({
-    url: config.apiOrigin + '/games' + store.game.id,
+    url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
     contentType: 'application/json',
     // add Token
@@ -32,10 +33,10 @@ const updateGame = function (data) {
 }
 
 const getGames = function (data) {
-  console.log('getGames api function reached')
-  console.log(data)
+  // console.log(data)
+  // console.log('getGames api function reached')
   return $.ajax({
-    url: config.apiOrigin + '/games',
+    url: config.apiOrigin + '/games/',
     method: 'GET',
     contentType: 'application/json',
     // add Token
