@@ -60,7 +60,6 @@ $('.box').on('click', function (event) {
         }
       }
 
-
   // If tie game
     if ($('#cell0').text() !== '' && $('#cell1').text() !== '' && $('#cell2').text() !== '' &&
     $('#cell3').text() !== '' && $('#cell4').text() !== '' && $('#cell5').text() !== '' &&
@@ -141,24 +140,24 @@ if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text
 
 } // end addHandlers function
 
-// Update the data every time a user makes a move
-// const onUpdateGame = function (index, value, over) {
-//   // console.log('onUpdateGame event function reached')
-//
-//   const data = {
-//     'game': {
-//       'cell': {
-//         'index': index,
-//         'value': value
-//       },
-//       'over': over
-//     }
-//   }
-//   // console.log(data)
-//   api.updateGame(data)
-//   .then(ui.updateGameSuccess)
-//   .catch(ui.updateGameFailure)
-// }
+Update the data every time a user makes a move
+const onUpdateGame = function (index, value, over) {
+  console.log('onUpdateGame event function reached')
+
+  const data = {
+    'game': {
+      'cell': {
+        'index': index,
+        'value': value
+      },
+      'over': over
+    }
+  }
+  // console.log(data)
+  api.updateGame(data)
+  .then(ui.updateGameSuccess)
+  .catch(ui.updateGameFailure)
+}
 
 module.exports = {
   addHandlers,

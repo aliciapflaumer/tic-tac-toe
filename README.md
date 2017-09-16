@@ -14,7 +14,11 @@ Even though I know I will not make requirements at least by the first due date, 
 
 ## Unsolved Problems
 
-• Code better to have DRYer code by simplifing the the click events and if/else statements in the events.js file, by not repeating code in a long if/else statement
+• Make it so user cannot continue clicking empty boxes after winner declared (as is, the winner outcome does not change but the empty boxes are still clickable)
+
+• On newGame click, sometimes starts with a "O" when it should start with "X". It's a reproducable bug, but not consistant.
+
+• A "nice to have", would be to display a message when user clicks already occupied box. Something like, 'try another box'.
 
 ## Wireframes
 
