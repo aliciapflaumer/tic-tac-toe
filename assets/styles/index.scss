@@ -9,7 +9,7 @@ $white: #fff;
 .container-fluid {
   margin-top: 5%;
   text-align: center;
-  width: 700px;
+  width: 80%;
   border: 1px solid $font-color;
 }
 
@@ -23,15 +23,15 @@ body {
 }
 
 .auth-wrapper {
-  width: 600px;
+  width: 80%;
 }
-#change-password {
-  float: left;
-}
-
-#sign-out {
-  float: right;
-}
+// #change-password {
+//   float: left;
+// }
+//
+// #sign-out {
+//   float: right;
+// }
 
 input {
   color: $background-color;

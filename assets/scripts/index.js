@@ -16,7 +16,7 @@ $(() => {
   $('.scoreboard_wrapper').hide()
   $('.game-board').hide()
 
-  
+
 
 })
 
@@ -29,5 +29,5 @@ $(() => {
 $(() => {
   authEvents.addHandlers()
   gameEvents.addHandlers()
-
+  // gameEvents.onUpdateGame()
 })
