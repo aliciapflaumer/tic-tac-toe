@@ -7,7 +7,10 @@ $font-color: #dfdfdf;
 $white: #fff;
 
 .container-fluid {
+  margin-top: 5%;
   text-align: center;
+  width: 700px;
+  border: 1px solid $font-color;
 }
 
 body {
@@ -41,9 +44,13 @@ button {
   border-radius: 5px;
 }
 
+.buttons {
+  margin-top: 2%;
+}
+
 .game-board {
   width: 100%;
-  margin: 10px auto;
+  margin: 10px 30px;
   font-family: 'Fredericka the Great', cursive;
 }
 
