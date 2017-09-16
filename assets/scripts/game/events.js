@@ -16,12 +16,9 @@ $('.newGame').on('click', function (event) {
 
   $('.game-board').show()
   $('.scoreboard_wrapper').show()
-
   $('.box').text('')
-
   $('#getGamesBtn').show()
   $('.resetGame').show()
-
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
@@ -44,9 +41,6 @@ api.getGames()
 // })
 
 let turn = 'X'
-
-let currentValue = turn
-let currentIndex = turn
 
 // setting up event listener
 // "div[id^='cell']"
