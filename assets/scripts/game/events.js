@@ -60,6 +60,7 @@ $('.box').on('click', function (event) {
         }
       }
 
+
   // If tie game
     if ($('#cell0').text() !== '' && $('#cell1').text() !== '' && $('#cell2').text() !== '' &&
     $('#cell3').text() !== '' && $('#cell4').text() !== '' && $('#cell5').text() !== '' &&
