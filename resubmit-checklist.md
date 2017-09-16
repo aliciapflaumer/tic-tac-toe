@@ -31,7 +31,7 @@
 
 1. [ done ] Clear the board when the New Game button is clicked
 
-* ************* * 
+* ************* *
 *4. Bug fixes, post cohort feedback:*
 
 1. [ done ] mobile phone display issue
