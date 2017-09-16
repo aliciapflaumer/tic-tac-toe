@@ -15,6 +15,10 @@ body {
   color: $font-color;
 }
 
+#header {
+  font-family: 'Fredericka the Great', cursive;
+}
+
 .auth-wrapper {
   width: 600px;
 }
@@ -40,7 +44,7 @@ button {
 .game-board {
   width: 100%;
   margin: 10px auto;
-
+  font-family: 'Fredericka the Great', cursive;
 }
 
 .box {

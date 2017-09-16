@@ -12,6 +12,7 @@ const signUpSuccess = function (data) {
 const signUpFailure = function (error) {
   // console.error(error)
   $('#message').text('Error on sign up. You may already be signed in.')
+  $('.newGame').hide()
   // console.log(this)
 }
 
@@ -26,7 +27,11 @@ const signInSuccess = function (data) {
 
 const signInFailure = function (error) {
   // console.error(error)
-  $('#message').text('Error on sign in')
+  $('#message').text('Error on sign in. Did you enter your email and password correct?')
+  $('.newGame').hide()
+  $('#sign-in').show()
+  $('#change-password').hide()
+  $('#sign-out').hide()
 }
 
 const changePasswordSuccess = function () {

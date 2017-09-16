@@ -27,10 +27,13 @@ const updateGameFail = function (data) {
 
 
 const getGamesSuccess = function (data) {
-  console.log('getGamesSuccess ui function reached')
-  // $('#game-message').text('You have played XX times').fadeIn(5000)
-  $('#game-message').text('You have played ' + data.games.length + ' times').fadeIn(5000)
+  // console.log('getGamesSuccess ui function reached')
+  $('#game-message').text('Game number ' + data.games.length).fadeIn(5000)
 }
+
+// const resetGameSuccess = function(data) {
+//   console.log('resetGameSuccess ui function reached')
+// }
 
 module.exports = {
   createGameSuccess,
@@ -38,4 +41,5 @@ module.exports = {
   updateGameSuccess,
   updateGameFail,
   getGamesSuccess
+  // resetGameSuccess
 }

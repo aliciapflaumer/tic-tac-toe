@@ -12,8 +12,11 @@ $(() => {
   $('#sign-out').hide()
   $('.newGame').hide()
   $('#getGamesBtn').hide()
+  $('.resetGame').hide()
   $('.scoreboard_wrapper').hide()
   $('.game-board').hide()
+
+  
 
 })
 
