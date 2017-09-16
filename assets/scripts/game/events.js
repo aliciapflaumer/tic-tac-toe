@@ -140,7 +140,7 @@ if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text
 
 } // end addHandlers function
 
-Update the data every time a user makes a move
+// Update the data every time a user makes a move
 const onUpdateGame = function (index, value, over) {
   console.log('onUpdateGame event function reached')
 
