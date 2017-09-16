@@ -20,14 +20,14 @@ $('.newGame').on('click', function (event) {
   $('.box').text('')
 
   $('#getGamesBtn').show()
+  $('.resetGame').show()
 
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
 })
 
-
-$('#getGamesBtn').on('click', function(event) {
+$('#getGamesBtn').on('click', function (event) {
     event.preventDefault()
     // console.log('getGamesBtn button clicked!')
 
@@ -35,15 +35,24 @@ api.getGames()
   .then(ui.getGamesSuccess)
 })
 
+// $('.resetGame').on('click', function (event) {
+//   event.preventDefault()
+//   console.log('resetGame button clicked!')
+//
+//     ui.resetGameSuccess()
+//     .then(ui.resetGameFailure)
+// })
 
 let turn = 'X'
+
+let playerxscore = 0;
+let playeroscore = 0;
 
 // setting up event listener
 // "div[id^='cell']"
 $('.box').on('click', function (event) {
   event.preventDefault()
   // console.log(this)
-
 
     if ($(this).text() === '') {
       // target element that we click on and change text
@@ -56,7 +65,6 @@ $('.box').on('click', function (event) {
           turn = 'X'
         }
       }
-
 
   // If tie game
     if ($('#cell0').text() !== '' && $('#cell1').text() !== '' && $('#cell2').text() !== '' &&
@@ -132,14 +140,15 @@ if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text
   {
     $('#game-message').text('Player O Wins!').fadeIn(5000)
   }
-
+  
 })
 
 
 } // end addHandlers function
 
+// Update the data every time a user makes a move
 const onUpdateGame = function (index, value, over) {
-  // console.log('onUpdateGame event data reached')
+  console.log('onUpdateGame event data reached')
 
   const data = {
     'game': {
@@ -151,13 +160,10 @@ const onUpdateGame = function (index, value, over) {
     }
   }
   console.log(data)
-  api.updateGame(data)
-  .then(ui.updateGameSuccess)
-  .catch(ui.updateGameFailure)
+  // api.updateGame(data)
+  // .then(ui.updateGameSuccess)
+  // .catch(ui.updateGameFailure)
 }
-
-
-
 
 module.exports = {
   addHandlers,
