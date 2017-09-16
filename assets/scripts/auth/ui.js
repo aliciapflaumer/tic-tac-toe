@@ -49,7 +49,6 @@ const signOutSuccess = function () {
   $('#message').text('Successfully signed out!')
   store.user = null // empty store
   $('#getGamesBtn').hide()
-  $('#sign-up').hide()
 }
 
 const signOutFailure = function (error) {

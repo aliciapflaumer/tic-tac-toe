@@ -16,12 +16,9 @@ $('.newGame').on('click', function (event) {
 
   $('.game-board').show()
   $('.scoreboard_wrapper').show()
-
   $('.box').text('')
-
   $('#getGamesBtn').show()
   $('.resetGame').show()
-
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
@@ -44,9 +41,6 @@ api.getGames()
 // })
 
 let turn = 'X'
-
-let playerxscore = 0;
-let playeroscore = 0;
 
 // setting up event listener
 // "div[id^='cell']"
@@ -140,32 +134,32 @@ if ($('#cell0').text() === 'O' && $('#cell1').text() === 'O' && $('#cell2').text
   {
     $('#game-message').text('Player O Wins!').fadeIn(5000)
   }
-  
+
 })
 
 
 } // end addHandlers function
 
 // Update the data every time a user makes a move
-const onUpdateGame = function (index, value, over) {
-  console.log('onUpdateGame event data reached')
-
-  const data = {
-    'game': {
-      'cell': {
-        'index': index,
-        'value': value
-      },
-      'over': over
-    }
-  }
-  console.log(data)
-  // api.updateGame(data)
-  // .then(ui.updateGameSuccess)
-  // .catch(ui.updateGameFailure)
-}
+// const onUpdateGame = function (index, value, over) {
+//   // console.log('onUpdateGame event function reached')
+//
+//   const data = {
+//     'game': {
+//       'cell': {
+//         'index': index,
+//         'value': value
+//       },
+//       'over': over
+//     }
+//   }
+//   // console.log(data)
+//   api.updateGame(data)
+//   .then(ui.updateGameSuccess)
+//   .catch(ui.updateGameFailure)
+// }
 
 module.exports = {
   addHandlers,
-  onUpdateGame
+  // onUpdateGame
 }

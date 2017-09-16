@@ -15,15 +15,15 @@ const createGameFail = function (data) {
 }
 
 
-const updateGameSuccess = function (data) {
-  console.log(data)
-  console.log('updateGameSuccess ui function reached')
-
-}
-
-const updateGameFail = function (data) {
-  console.log(data)
-}
+// const updateGameSuccess = function (data) {
+//   // console.log(data)
+//   // console.log('updateGameSuccess ui function reached')
+//
+// }
+//
+// const updateGameFail = function (data) {
+//   // console.log(data)
+// }
 
 
 const getGamesSuccess = function (data) {
@@ -38,8 +38,8 @@ const getGamesSuccess = function (data) {
 module.exports = {
   createGameSuccess,
   createGameFail,
-  updateGameSuccess,
-  updateGameFail,
+  // updateGameSuccess,
+  // updateGameFail,
   getGamesSuccess
   // resetGameSuccess
 }

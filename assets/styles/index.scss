@@ -9,7 +9,7 @@ $white: #fff;
 .container-fluid {
   margin-top: 5%;
   text-align: center;
-  width: 700px;
+  width: 90%;
   border: 1px solid $font-color;
 }
 
@@ -23,15 +23,15 @@ body {
 }
 
 .auth-wrapper {
-  width: 600px;
+  width: 90%;
 }
-#change-password {
-  float: left;
-}
-
-#sign-out {
-  float: right;
-}
+// #change-password {
+//   float: left;
+// }
+//
+// #sign-out {
+//   float: right;
+// }
 
 input {
   color: $background-color;
@@ -50,7 +50,7 @@ button {
 
 .game-board {
   width: 100%;
-  margin: 10px 30px;
+  margin: 0 7%;
   font-family: 'Fredericka the Great', cursive;
 }
 
