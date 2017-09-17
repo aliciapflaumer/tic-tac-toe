@@ -1,6 +1,6 @@
 
-curl --include --request PATCH "http://tic-tac-toe.wdibos.com/9691" \
---header "Authorization: Token token=BAhJIiU5YjRjOWJmMmExMjcwN2YyYTYxMjZjOTlmMmIyM2I5OQY6BkVG--7ac9257fe510f09536b0eb81d8036d51e2c53196" \
+curl --include --request PATCH "http://tic-tac-toe.wdibos.com/games/9707" \
+--header "Authorization: Token token=BAhJIiUyYzFkOGU2ZTFjMDFjZmNkM2I2OTBiMDVlMzY1M2MwYwY6BkVG--62b42393663cd7ab8ecaddda1b6b76b92a5414a6" \
 --header "Content-Type: application/json" \
 --data '{
   "game": {
