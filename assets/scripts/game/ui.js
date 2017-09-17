@@ -33,7 +33,6 @@ const getGamesSuccess = function (data) {
   $('#game-message').text('Game number ' + data.games.length).fadeIn(5000)
 }
 
-
 module.exports = {
   createGameSuccess,
   createGameFail,

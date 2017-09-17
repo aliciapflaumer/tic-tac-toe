@@ -21,7 +21,7 @@
 
 1.  [ done ] - `createGameSuccess` should show the game board and say whose turn it is
 
-1. [  ] Update a game by storing new moves. (UPDATE)*
+1. [ done] Update a game by storing new moves. (UPDATE)*
 
 1. [ done ] Visually display the results of retrieving game statistics, such as total games won by a user. (READ)*
 
@@ -42,7 +42,7 @@
 
 1. [ done ] Make it so user cannot continue clicking empty boxes after winner declared
 
-1. [  ] On newGame click, sometimes starts with a "O"
+1. [ done ] On newGame click, sometimes starts with a "O"
 
 1. [ done ] Check success message when password has changed successfully
 

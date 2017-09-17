@@ -12,36 +12,28 @@ const ui = require('./ui')
 // game events
 const addHandlers = function () {
 
-$('.newGame').on('click', function (event) {
-  // console.log('new game button clicked!')
-  event.preventDefault()
-  const data = getFormFields(event.target)
-
-  $('.game-board').show()
-  $('.scoreboard_wrapper').show()
-  $('.box').text('')
-  $('#getGamesBtn').show()
-  // $('.resetGame').show()
-  api.createGame()
-    .then(ui.createGameSuccess)
-    .catch(ui.createGameFailure)
-})
-
-$('#getGamesBtn').on('click', function (event) {
+  $('.newGame').on('click', function (event) {
+    // console.log('new game button clicked!')
     event.preventDefault()
-    // console.log('getGamesBtn button clicked!')
-api.getGames()
-  .then(ui.getGamesSuccess)
-})
+    const data = getFormFields(event.target)
+    turn = 'X'
+    $('.game-board').show()
+    $('.scoreboard_wrapper').show()
+    $('.box').text('')
+    $('#getGamesBtn').show()
+    // $('.resetGame').show()
+    api.createGame()
+      .then(ui.createGameSuccess)
+      .catch(ui.createGameFailure)
+  })
 
-// $('.resetGame').on('click', function (event) {
-//   event.preventDefault()
-//   console.log('resetGame button clicked!')
-//
-//     ui.resetGameSuccess()
-//     .then(ui.resetGameFailure)
-// })
-
+  $('#getGamesBtn').on('click', function (event) {
+      event.preventDefault()
+      // console.log('getGamesBtn button clicked!')
+  api.getGames()
+    .then(ui.getGamesSuccess)
+  })
+  
 let turn = 'X'
 
 // setting up event listener
@@ -55,20 +47,22 @@ $('.box').on('click', function (event) {
 
         if (turn === 'X') {
           $(this).text('X')
-          // store.player = 'X'
           turn = 'O'
         } else {
           $(this).text('O')
-          // store.player = 'O'
           turn = 'X'
         }
       }
+
+
+
 
   // If tie game
     if ($('#cell0').text() !== '' && $('#cell1').text() !== '' && $('#cell2').text() !== '' &&
     $('#cell3').text() !== '' && $('#cell4').text() !== '' && $('#cell5').text() !== '' &&
     $('#cell6').text() !== '' && $('#cell7').text() !== '' && $('#cell8').text() !== '') {
-      $('#game-message').text('Game Over. It\'s a draw. No one wins this game.').fadeIn(5000)
+      $('#game-message').text('Game Over. It\'s a draw. No one wins this game.').fadeIn(5000),
+      $('.game-board').hide()
     }
 
 // if Player X wins
