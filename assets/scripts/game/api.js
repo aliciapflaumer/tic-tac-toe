@@ -12,25 +12,27 @@ const createGame = function (data) {
     // add Token
     headers: {
       Authorization: 'Token token=' + store.user.token
+    }
+  })
+    .then((data) => {
+      store.game = data.game
+  })
+}
+
+const updateGame = function (data) {
+  // console.log(data)
+  // console.log('updateGame api function reached')
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'PATCH',
+    contentType: 'application/json',
+    // add Token
+    headers: {
+      Authorization: 'Token token=' + store.user.token
     },
     data
   })
 }
-
-// const updateGame = function (data) {
-//   // console.log(data)
-//   // console.log('updateGame api function reached')
-//   return $.ajax({
-//     url: config.apiOrigin + '/games/' + store.game.id,
-//     method: 'PATCH',
-//     contentType: 'application/json',
-//     // add Token
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-// }
 
 const getGames = function (data) {
   // console.log(data)

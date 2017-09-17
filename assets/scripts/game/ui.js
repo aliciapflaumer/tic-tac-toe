@@ -3,7 +3,8 @@
 const store = require('../store')
 
 const createGameSuccess = function (data) {
-  // console.log(data)
+  console.log(data)
+  console.log(store.game.id)
   // console.log('Successfully created game!')
   $('#game-message').text("It\'s X\'s turn!").fadeOut(5000)
   $('#message').hide()

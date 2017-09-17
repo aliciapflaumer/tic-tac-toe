@@ -17,11 +17,12 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-  // console.log(data)
-  // console.log('Successfully signed in')
+  console.log(data)
+  console.log('Arrived at Sign in success!')
+
   $('#message').text('Successfully signed in')
   store.user = data.user
-  // console.log('store.user console log data is ' + store.user)
+  console.log('store.user console log data is ' + data.user)
   // $( ".game-board" ).show()
 }
 
