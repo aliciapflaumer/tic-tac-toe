@@ -42,6 +42,7 @@ const signInFailure = function (error) {
   $('#message').text('Error on sign in. Did you enter your email and password correct?')
   $('.newGame').hide()
   $('#sign-in').show()
+  $('#sign-up').show()
   $('#change-password').hide()
   $('#sign-out').hide()
 }
