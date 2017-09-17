@@ -76,7 +76,6 @@ $('.box').on('click', function (event) {
     $('#cell3').text() !== '' && $('#cell4').text() !== '' && $('#cell5').text() !== '' &&
     $('#cell6').text() !== '' && $('#cell7').text() !== '' && $('#cell8').text() !== '') {
       $('#game-message').text('Game Over. It\'s a draw. No one wins this game.').fadeIn(5000)
-      $('.game-board').hide()
     }
 
 // if Player X wins
