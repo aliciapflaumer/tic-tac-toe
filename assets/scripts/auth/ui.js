@@ -27,7 +27,7 @@ const signUpFailure = function (error) {
 
 const signInSuccess = function (data) {
   console.log(data)
-  console.log('Arrived at Sign in success!')
+  // console.log('Arrived at Sign in success!')
 
   $('#message').text('Successfully signed in')
   store.user = data.user
@@ -49,6 +49,7 @@ const signInFailure = function (error) {
 const changePasswordSuccess = function () {
   // console.log('Successfully changed password')
   $('#message').text('Successfully changed password!')
+  resetForm($('#change-password'))
 }
 
 const changePasswordFailure = function (error) {

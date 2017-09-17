@@ -1,12 +1,12 @@
 
-curl --include --request PATCH "http://tic-tac-toe.wdibos.com/games/9707" \
---header "Authorization: Token token=BAhJIiUyYzFkOGU2ZTFjMDFjZmNkM2I2OTBiMDVlMzY1M2MwYwY6BkVG--62b42393663cd7ab8ecaddda1b6b76b92a5414a6" \
+curl --include --request PATCH "http://tic-tac-toe.wdibos.com/games/9761" \
+--header "Authorization: Token token=BAhJIiVhM2I4MTdiYjlkMjZkMzE3MTM3MTljMjM0YTQ2YjhjMAY6BkVG--237124d3c446e02c3c33d54077ac93130d1fc007" \
 --header "Content-Type: application/json" \
 --data '{
   "game": {
     "cell": {
-      "index": 2,
-      "value": "x"
+      "index": "'"${INDEX}"'",
+      "value": "'"$VALUE"'"
     },
     "over": false
   }

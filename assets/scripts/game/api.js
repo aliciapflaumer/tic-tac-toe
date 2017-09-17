@@ -6,6 +6,7 @@ const store = require('../store')
 const createGame = function (data) {
   // console.log(data)
   // console.log('createGame works')
+
   return $.ajax({
     url: config.apiOrigin + '/games/',
     method: 'POST',
@@ -51,6 +52,6 @@ const getGames = function (data) {
 
 module.exports = {
   createGame,
-  // updateGame,
+  updateGame,
   getGames
 }
