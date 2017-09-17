@@ -2,27 +2,39 @@
 
 const store = require('../store')
 
+const resetForm = function resetForm ($form) {
+  $form.find('input:text, input:password, input:file, select, textarea').val('')
+  $form.find('input:radio, input:checkbox')
+         .removeAttr('checked').removeAttr('selected')
+}
+
 const signUpSuccess = function (data) {
   // console.log(data)
   // console.log('Successfully signed up')
   $('#message').text('Successfully signed up')
-  // console.log(this)
+  $('#sign-up').show()
+  resetForm($('#sign-up'))
+  // console.log('Is the form empty now?')
 }
 
 const signUpFailure = function (error) {
   // console.error(error)
   $('#message').text('Error on sign up. You may already be signed in.')
+  $('#sign-up').show()
   $('.newGame').hide()
   // console.log(this)
 }
 
 const signInSuccess = function (data) {
-  // console.log(data)
-  // console.log('Successfully signed in')
+  console.log(data)
+  // console.log('Arrived at Sign in success!')
+
   $('#message').text('Successfully signed in')
   store.user = data.user
-  // console.log('store.user console log data is ' + store.user)
-  // $( ".game-board" ).show()
+  console.log('store.user console log data is ' + data.user)
+
+  resetForm($('#sign-in'))
+  // console.log('Is the form empty now?')
 }
 
 const signInFailure = function (error) {
@@ -37,6 +49,7 @@ const signInFailure = function (error) {
 const changePasswordSuccess = function () {
   // console.log('Successfully changed password')
   $('#message').text('Successfully changed password!')
+  resetForm($('#change-password'))
 }
 
 const changePasswordFailure = function (error) {
