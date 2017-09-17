@@ -10,11 +10,12 @@
 
 ## What I have learned so far
 
-Even though I know I will not make requirements at least by the first due date, I have learned a lot. When it comes to learning new technical skills I grasp the concepts a bit slow. I have to remind myself to slow down and read through the problem and eventually I will comprehend.
+• I have learned about better code management. Taking the process in stages, working on in the following order curl request, html, events, api, and ui.
+
+• I have learned about authenticaton: when a user signs up, signs in, changes their password, and signs out.
+
 
 ## Unsolved Problems
-
-• Make it so user cannot continue clicking empty boxes after winner declared (as is, the winner outcome does not change but the empty boxes are still clickable)
 
 • On newGame click, sometimes starts with a "O" when it should start with "X". It's a reproducable bug, but not consistant.
 

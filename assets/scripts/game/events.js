@@ -8,6 +8,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 
+
 // game events
 const addHandlers = function () {
 
@@ -20,7 +21,7 @@ $('.newGame').on('click', function (event) {
   $('.scoreboard_wrapper').show()
   $('.box').text('')
   $('#getGamesBtn').show()
-  $('.resetGame').show()
+  // $('.resetGame').show()
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
@@ -42,14 +43,6 @@ api.getGames()
 // })
 
 let turn = 'X'
-
-store.player = 'X'
-store.counter = 0
-
-// let i = turn
-//
-// let value = turn[i]
-// let index = i
 
 // setting up event listener
 // "div[id^='cell']"
@@ -76,7 +69,6 @@ $('.box').on('click', function (event) {
     $('#cell3').text() !== '' && $('#cell4').text() !== '' && $('#cell5').text() !== '' &&
     $('#cell6').text() !== '' && $('#cell7').text() !== '' && $('#cell8').text() !== '') {
       $('#game-message').text('Game Over. It\'s a draw. No one wins this game.').fadeIn(5000)
-      $('.game-board').hide()
     }
 
 // if Player X wins
