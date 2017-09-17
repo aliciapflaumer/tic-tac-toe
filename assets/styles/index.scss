@@ -25,13 +25,11 @@ body {
 .auth-wrapper {
   width: 90%;
 }
-// #change-password {
-//   float: left;
-// }
-//
-// #sign-out {
-//   float: right;
-// }
+
+#game-message {
+  font-size: 1.5em;
+  margin-top: 3%;
+}
 
 input {
   color: $background-color;
