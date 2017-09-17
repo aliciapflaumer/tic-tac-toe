@@ -8,6 +8,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 
+
 // game events
 const addHandlers = function () {
 
@@ -20,7 +21,7 @@ $('.newGame').on('click', function (event) {
   $('.scoreboard_wrapper').show()
   $('.box').text('')
   $('#getGamesBtn').show()
-  $('.resetGame').show()
+  // $('.resetGame').show()
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
@@ -42,14 +43,6 @@ api.getGames()
 // })
 
 let turn = 'X'
-
-store.player = 'X'
-store.counter = 0
-
-// let i = turn
-//
-// let value = turn[i]
-// let index = i
 
 // setting up event listener
 // "div[id^='cell']"
