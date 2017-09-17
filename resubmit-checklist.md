@@ -40,10 +40,12 @@
 
 1. [ done ] in html old password needed "password" for type input field
 
-1. [  ] Make it so user cannot continue clicking empty boxes after winner declared
+1. [ done ] Make it so user cannot continue clicking empty boxes after winner declared
 
 1. [  ] On newGame click, sometimes starts with a "O"
 
-1. [  ] Need to display message 'try another box' when user clicks already occupied box
-
 1. [ done ] Check success message when password has changed successfully
+
+1. [ done ] reset form to clear auth fields
+
+1. [ done ] hide game board when winner declared

@@ -2,16 +2,25 @@
 
 const store = require('../store')
 
+const resetForm = function resetForm ($form) {
+  $form.find('input:text, input:password, input:file, select, textarea').val('')
+  $form.find('input:radio, input:checkbox')
+         .removeAttr('checked').removeAttr('selected')
+}
+
 const signUpSuccess = function (data) {
   // console.log(data)
   // console.log('Successfully signed up')
   $('#message').text('Successfully signed up')
-  // console.log(this)
+  $('#sign-up').show()
+  resetForm($('#sign-up'))
+  // console.log('Is the form empty now?')
 }
 
 const signUpFailure = function (error) {
   // console.error(error)
   $('#message').text('Error on sign up. You may already be signed in.')
+  $('#sign-up').show()
   $('.newGame').hide()
   // console.log(this)
 }
@@ -23,7 +32,9 @@ const signInSuccess = function (data) {
   $('#message').text('Successfully signed in')
   store.user = data.user
   console.log('store.user console log data is ' + data.user)
-  // $( ".game-board" ).show()
+
+  resetForm($('#sign-in'))
+  // console.log('Is the form empty now?')
 }
 
 const signInFailure = function (error) {
