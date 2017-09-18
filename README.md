@@ -2,7 +2,7 @@
 
 ## Technologies Used
 
-• HTML, SCSS, Javascript, AJAX, and jQuery
+• HTML, SCSS, Javascript, AJAX, jQuery, Bootstrap
 
 • Grunt serve and grunt deploy to manage development and production servers
 
@@ -10,16 +10,19 @@
 
 ## What I have learned so far
 
-• I have learned about better code management. Taking the process in stages, working on in the following order curl request, html, events, api, and ui.
+• I have learned about better code management. Taking the process in stages, working in the following order curl request, html, events, api, and ui.
+
+• I have learned about CRUD (Create, Read, Update, Delete)
 
 • I have learned about authenticaton: when a user signs up, signs in, changes their password, and signs out.
 
+• I have learned that it's important to write detailed issues, so that the consultant team can have a better understanding of the problem and then skew me in the right direction without giving me the answer, but have me figure it out on my own.
 
 ## Unsolved Problems
 
-• On newGame click, sometimes starts with a "O" when it should start with "X". It's a reproducable bug, but not consistant.
+• A "nice to have", to display a message when user clicks already occupied box. Something like, 'try another box'.
 
-• A "nice to have", would be to display a message when user clicks already occupied box. Something like, 'try another box'.
+• A "nice to have", to display individual wins for each player and how many ties.
 
 ## Wireframes
 
