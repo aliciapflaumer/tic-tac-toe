@@ -22,17 +22,17 @@ const signUpFailure = function (error) {
   $('#message').text('Error on sign up. You may already be signed in.')
   $('#sign-up').show()
   $('.newGame').hide()
+  resetForm($('#sign-up'))
   // console.log(this)
 }
 
 const signInSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   // console.log('Arrived at Sign in success!')
 
   $('#message').text('Successfully signed in')
   store.user = data.user
-  console.log('store.user console log data is ' + data.user)
-
+  // console.log('store.user console log data is ' + data.user)
   resetForm($('#sign-in'))
   // console.log('Is the form empty now?')
 }
@@ -45,6 +45,7 @@ const signInFailure = function (error) {
   $('#sign-up').show()
   $('#change-password').hide()
   $('#sign-out').hide()
+  resetForm($('#sign-up'))
 }
 
 const changePasswordSuccess = function () {
@@ -56,6 +57,7 @@ const changePasswordSuccess = function () {
 const changePasswordFailure = function (error) {
   // console.log(error)
   $('#message').text('Error on change password!')
+  resetForm($('#sign-up'))
 }
 
 const signOutSuccess = function () {

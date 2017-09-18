@@ -36,7 +36,7 @@ const getGamesSuccess = function (data) {
 module.exports = {
   createGameSuccess,
   createGameFail,
-  // updateGameSuccess,
-  // updateGameFail,
+  updateGameSuccess,
+  updateGameFail,
   getGamesSuccess
 }

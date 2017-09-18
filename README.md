@@ -22,6 +22,8 @@
 
 ## Unsolved Problems
 
+• When playing the game, should be making a PATCH request to update the server every time a player makes a move, but doesn't. I received a successfull PATCH curl request though.
+
 • A "nice to have", to display a message when user clicks already occupied box. Something like, 'try another box'.
 
 • A "nice to have", to display individual wins for each player and how many ties.

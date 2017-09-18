@@ -21,7 +21,7 @@
 
 1.  [ done ] - `createGameSuccess` should show the game board and say whose turn it is
 
-1. [ done] Update a game by storing new moves. (UPDATE)*
+1. [  ] Update a game by storing new moves. (UPDATE)*
 
 1. [ done ] Visually display the results of retrieving game statistics, such as total games won by a user. (READ)*
 
