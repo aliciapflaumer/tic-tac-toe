@@ -18,7 +18,6 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function (error) {
-  // console.error(error)
   $('#message').text('Error on sign up. You may already be signed in.')
   $('#sign-up').show()
   $('.newGame').hide()
