@@ -30,7 +30,7 @@ const updateGameFail = function (data) {
 
 const getGamesSuccess = function (data) {
   // console.log('getGamesSuccess ui function reached')
-  $('#game-message').text('Game number ' + data.games.length).fadeIn(5000)
+  $('#game-message').text('Game number ' + data.games.length).fadeIn(5000).fadeOut(5000)
 }
 
 module.exports = {

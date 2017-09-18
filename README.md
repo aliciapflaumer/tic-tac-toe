@@ -10,6 +10,8 @@
 
 ## What I have learned so far
 
+• As part of documenting my workflow, I used a progress chart consisting of each stage/step on paper, checking off each as I moved along. Accompanied with a to-do list created in atom and saved to my repo, where I would mark done when complete (that helped with bug fixes, too).
+
 • I have learned about better code management. Taking the process in stages, working in the following order curl request, html, events, api, and ui.
 
 • I have learned about CRUD (Create, Read, Update, Delete)
@@ -23,6 +25,8 @@
 • A "nice to have", to display a message when user clicks already occupied box. Something like, 'try another box'.
 
 • A "nice to have", to display individual wins for each player and how many ties.
+
+• I would like to have DRY code. I wrote my code not using a game array. I hand-coded a lot of it just to get the game to work, and because that's how it was making sense to me at the time to create the game (a very un-dry way).
 
 ## Wireframes
 
@@ -45,5 +49,5 @@ I had a three revisions of my wireframes. At the beginning I wasn't quite graspi
 • As a user, I want to click the button so that I can log out.
 
 BONUS:
+
 • As a user, I want to search for an opponent so that I can play against them.
-incluincluin
