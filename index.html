@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Alicia's Tic-Tac-Toe Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="container-fluid">
+      <h1 id="header">Tic-Tac-Toe Game</h1>
+<!-- begin auth stuff -->
+      <div class="auth-wrapper">
+        <p id='message'></p>
+          <form id="sign-up">
+            <fieldset>
+              <h4>Sign up!</h4>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="Password confirmation">
+              <input type="submit" name="submit" value="Sign up">
+            </fieldset>
+          </form>
+
+          <form id="sign-in">
+            <fieldset>
+              <h4>Sign in!</h4>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" name="submit" value="Sign in">
+            </fieldset>
+          </form>
+
+          <form id="change-password">
+            <fieldset>
+              <h4>Change password!</h4>
+              <input type="password" name="passwords[old]" placeholder="Old password">
+              <input type="password" name="passwords[new]" placeholder="New password">
+              <input type="submit" name="submit" value="Change password">
+            </fieldset>
+          </form>
+
+          <form id="sign-out">
+            <fieldset>
+              <h4>Sign out!</h4>
+              <input type="submit" name="submit" value="Sign out">
+            </fieldset>
+          </form>
+      </div>
+      <br style="clear: both;" />
+
+<!-- begin game stuff -->
+
+      <!-- Score board -->
+    <!-- <div class="scoreboard_wrapper">
+         <div class="score div-1">
+          <p class="player_1">Player X</p>
+          <div id="player_x" class="score_box"></div>
+        </div>
+        <div class="score div-2">
+          <p class="player_2">Player O</p>
+          <div id="player_o" class="score_box"></div>
+        </div>
+        <div class="score div-3">
+          <p class="tie-games">Tie Games</p>
+          <div id="tie" class="score_box"></div>
+        </div>
+    </div> -->
+
+    <!-- New game, get total games and reset score buttons -->
+    <div class="buttons">
+      <button class="newGame">New Game</button>
+      <button id="getGamesBtn">Total games</button>
+      <!-- <button class="resetGame">Reset</button> -->
+    </div>
+
+      <!-- Game board -->
+      <div id='game-message'></div>
+      <div class="game-board">
+        <div class="row">
+          <div id="cell0" class="col-xs-12 col-md-8 box"></div>
+          <div id="cell1" class="col-xs-12 col-md-8 box"></div>
+          <div id="cell2" class="col-xs-12 col-md-8 box"></div>
+        </div>
+
+        <div class="row">
+          <div id="cell3" class="col-xs-12 col-md-8 box"></div>
+          <div id="cell4" class="col-xs-12 col-md-8 box"></div>
+          <div id="cell5" class="col-xs-12 col-md-8 box"></div>
+        </div>
+
+        <div class="row">
+          <div id="cell6" class="col-xs-12 col-md-8 box"></div>
+          <div id="cell7" class="col-xs-12 col-md-8 box"></div>
+          <div id="cell8" class="col-xs-12 col-md-8 box"></div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Made by Alicia Pflaumer with ❤️  &nbsp; Follow her code on <a href="https://github.com/aliciapflaumer/">Github</a></p>
+      </footer>
+    </div>
+    </body>
+</html>
